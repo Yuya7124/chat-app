@@ -16,6 +16,10 @@ class MessagesController < ApplicationController
     end
   end
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   private
 
   def message_params
