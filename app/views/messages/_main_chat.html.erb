@@ -6,7 +6,6 @@
     <%= link_to 'チャットを終了する', room_path(@room), method: :delete %>
   </div>
 </div>
-<<<<<<< Updated upstream
 <div class="chat_disp">
   <%= render partial: 'message', collection: @messages %>
 </div>
@@ -19,39 +18,4 @@
     </label>
   </div>
   <%= f.submit '送信', class: 'send_btn' %>
-=======
- <div class="chat_disp">
-<%#  
-  <div class="talk_chat">
-    <div class="who_and_when_talk">
-      <div class="who_talk">Tom</div>
-      <div class="when_talk">2020/3/31(Wed) 12:43:30</div>
-    </div>
-    <div class="what_talk">おはよう</div>
-  </div>
-  <div class="talk_chat">
-    <div class="who_and_when_talk">
-      <div class="who_talk">Sim</div>
-      <div class="when_talk">2020/3/31(Wed) 12:43:35</div>
-    </div>
-    <div class="what_talk">おはよう</div>
-  </div>
-%>
-  <%= render partial: 'message', collection: @messages %>
-</div> 
-<%# <div class="chat_form"> %>
-<%= form_with model: [@room, @message], class: 'chat_form', local: true do |f| %>
-  <div class="form_input">
-    <%# <input class="chat_message_form" type="text" placeholder="type a message" > %>
-    <%= f.text_field :content, class: 'chat_message_form', placeholder: 'type a message' %>
-    <label class="form_image">
-      <span class="image-file">画像</span>
-      <%# <input type="file" class="hidden"> %>
-      <%= f.file_field :image, class: 'hidden' %>
-    </label>
-  </div>
-  <%# <input class="send_btn" type="submit" value="送信"> %>
-  <%= f.submit '送信', class: 'send_btn' %>
-<%# </div> %>
->>>>>>> Stashed changes
 <% end %>
