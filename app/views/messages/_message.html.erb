@@ -1,6 +1,5 @@
 <div class="talk_chat">
   <div class="who_and_when_talk">
-<<<<<<< Updated upstream
     <div class="who_talk">
       <%= message.user.name %>
     </div>
@@ -10,16 +9,6 @@
   </div>
   <div class="what_talk">
     <%= message.content %>
-=======
-    <div class="who_talk"> 
-      Sim
-    </div>
-    <div class="when_talk">
-      2020/3/31(Wed) 12:43:35
-    </div>
   </div>
-  <div class="what_talk">
-    おはよう
->>>>>>> Stashed changes
-  </div>
+  <%= image_tag message.image.variant(resize: '500x500'), class: 'form_image' if message.image.attached? %>
 </div>
